@@ -1,6 +1,8 @@
-## COMP3512 - Codespace Base Template
+## Movie Search Website Overview
+This Code is fir a movie searching website which allows users to search by movie title, rating or both. This frontend is built using HTML, CSS and Javascript and uses IMDB APIs as well as an API built by the backend to retrive the search results and all the informations about them. Users can click on search results to see more information like cast, runtime and the current showing of the movies. Users can add movies to either a Favorites or To-Watch list which is saved using browser caches and they can search for movies specifically in these lists. The backend of the site uses PHP and is responsible for the admin pages and managing the theatres and movies in the database. The admin pages require a login enforced by cookies and session states and uses SQL queries to allows changes to the movie database which holds which movies are playing at which theatres. This project was previously hosted on Google Cloud Platforms and met 115/115 functional requirments set by the assignment. 
 
-A Codespace with these features:
+
+## COMP3512 - Codespace Base Template:
 
 ### LAMPish
 
