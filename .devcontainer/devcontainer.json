@@ -1,0 +1,94 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/php-mariadb
+{
+  "name": "PHP & MariaDB",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+  // For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "explorer.compactFolders": false,
+        "files.associations": {
+          "*.inc": "php"
+        },
+        "githubPullRequests.ignoredPullRequestBranches": ["main"],
+        "git.autofetch": true,
+        "editor.minimap.enabled": false,
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "other": "off",
+          "strings": "off"
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "files.autoSave": "off",
+        "cSpell.ignorePaths": [
+          "package-lock.json",
+          "node_modules",
+          "vscode-extension",
+          ".git/objects",
+          ".vscode",
+          ".vscode-insiders",
+          ".prettierrc",
+          ".eslintrc.json",
+          ".devcontainer"
+        ],
+        "[php]": {
+          "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+          "editor.maxTokenizationLineLength": 2500,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "editor.formatOnSave": true,
+        "extensions.ignoreRecommendations": true,
+        "github.codespaces.devcontainerChangedNotificationStyle": "none",
+        "workbench.startupEditor": "none",
+        "workbench.tips.enabled": false,
+        "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+        "intelephense.format.braces": "k&r",
+        "intelephense.files.exclude": [
+          "**/.git/**",
+          "**/.svn/**",
+          "**/.hg/**",
+          "**/CVS/**",
+          "**/.DS_Store/**",
+          "**/node_modules/**",
+          "**/bower_components/**",
+          "**/vendor/**/{Tests,tests}/**",
+          "**/.history/**",
+          "**/vendor/**/vendor/**",
+          "**/*.api.php"
+        ],
+        "php.suggest.basic": false,
+        "php.validate.enable": false,
+        "php-docblocker.returnGap": true,
+        "php-docblocker.useShortNames": true
+      },
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "cweijan.vscode-database-client2",
+        "esbenp.prettier-vscode",
+        "neilbrayfield.php-docblocker",
+        "rangav.vscode-thunder-client",
+        "ritwickdey.liveserver",
+        "streetsidesoftware.code-spell-checker",
+        "xdebug.php-debug"
+      ]
+    }
+  },
+  "forwardPorts": [8080, 3306],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html && sudo chmod u+x \"$(pwd)\"/rewire.sh",
+  "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\"/htdocs/ /var/www/html",
+  "postAttachCommand": "npm install && apache2ctl restart"
+  // Configure tool-specific properties.
+  // "customizations": {},
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}

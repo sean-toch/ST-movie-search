@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  background: white;
+}
+
+.header {
+  display: flex;
+  background: #561c24;
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.header-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-left: -20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding-bottom: 20px;
+}
+
+.login {
+  background: white;
+  height: auto;
+  min-height: 650px;
+  width: 80%;
+  padding-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.login-form {
+  justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgb(240, 240, 240);
+  text-align: center;
+  height: 400px;
+  width: 325px;
+}
+
+.movie {
+  background: white;
+  height: auto;
+  min-height: 650px;
+  width: 80%;
+  padding-top: 40px;
+  margin-bottom: 60px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  margin-top: 120px;
+}
+
+.movie-item {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  background: rgb(240, 240, 240);
+  text-align: left;
+  height: auto;
+  width: 600px;
+  justify-content: center;
+}
+
+.theatre {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: white;
+  height: auto;
+  min-height: 650px;
+  width: 90%;
+  padding-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.theatre-item {
+  justify-content: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  background: rgb(240, 240, 240);
+  text-align: center;
+  height: 300px;
+  width: 375px;
+}
+
+.submit-btn {
+  width: 120px;
+  font-size: 15px;
+  border-radius: 2rem;
+  background: #561c24;
+  color: white;
+  border: 0;
+}
+
+.submit-btn:hover {
+  background-color: #47171d;
+}
+
+.submit-btn:active {
+  background-color: #47171d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+ul {
+  list-style-type: square;
+  color: #561c24;
+  line-height: 1.2;
+}
+
+h1 {
+  color: #561c24;
+  font-size: 30px;
+  font-family: "arial";
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h2 {
+  color: #561c24;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "arial";
+  line-height: 1.2;
+}
+
+h3 {
+  color: gray;
+  font-size: 25px;
+  font-weight: normal;
+  font-family: "arial";
+  line-height: 1.2;
+}
+
+h4 {
+  color: #561c24;
+  font-size: 25px;
+  font-weight: normal;
+  font-family: "arial";
+  line-height: 1.2;
+}
+
+h5 {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "arial";
+  line-height: 1.2;
+}
+
+h6 {
+  color: #561c24;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: "arial";
+  line-height: 1.2;
+}
+
+a:link,
+a:visited {
+  color: #7d0a0a;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:active {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.nav-link:link,
+a.nav-link:visited {
+  color: #7d0a0a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.nav-link:hover {
+  color: red;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+a.nav-link:active {
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+a.logout-link:link,
+a.logout-link:visited {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.logout-link:hover {
+  color: gainsboro;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.logout-link:active {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p.login-error {
+  color: red;
+}
+
+.content {
+  display: inline-flex;
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+}
+
+.sort-container {
+  margin-left: 45%;
+  margin-top: 140px;
+  height: 100px;
+}

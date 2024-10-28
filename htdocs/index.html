@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/frontend-styles.css" />
+    <script type="module" src="./js/index.js"></script>
+    <title>Index</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-item">
+        <img src="./images/logo.png" class="logo" alt="Logo" />
+      </div>
+      <div class="header-item">
+        <a class="admin-link" href="admin.php">Admin Login</a>
+      </div>
+    </div>
+    <main>
+      <div class="search-container">
+        <div class="name-input-container">
+          <input
+            type="text"
+            placeholder="Search Movie Names..."
+            id="search-input"
+          />
+          <button class="clear-button" id="name-clear">Clear</button>
+        </div>
+        <div class="vote-avg-container">
+          <input
+            type="number"
+            id="vote-min"
+            placeholder="Min"
+            min="0"
+            max="10"
+            step="1"
+            value="0"
+          />
+          <span>to</span>
+          <input
+            type="number"
+            id="vote-max"
+            placeholder="Max"
+            min="0"
+            max="10"
+            step="1"
+            value="10"
+          />
+          <button class="clear-button" id="vote-clear">Clear</button>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="favorites-radio"
+            name="search-param"
+            value="favorites"
+          />
+          <label for="favorites-radio">Search Favorites</label><br />
+          <input
+            type="radio"
+            id="toWatch-radio"
+            name="search-param"
+            value="toWatch"
+          />
+          <label for="toWatch-radio">Search ToWatch</label><br />
+          <input type="radio" id="all-radio" name="search-param" value="all" />
+          <label for="all-radio">Search All</label><br />
+        </div>
+        <button class="search-button" id="search-button">Search</button>
+      </div>
+      <div class="sort-container">
+        <button class="sort-button" id="sort-button">Sort</button>
+        <select name="sort" id="sort">
+          <option value="default">Default</option>
+          <option value="title-asc">A-Z</option>
+          <option value="title-dsc">Z-A</option>
+          <option value="year-asc">Oldest First</option>
+          <option value="year-dsc">Newest First</option>
+          <option value="vote-asc">Vote: Low-High</option>
+          <option value="vote-dsc">Vote High-Low</option>
+        </select>
+      </div>
+      <div id="results-container"></div>
+    </main>
+  </body>
+</html>
